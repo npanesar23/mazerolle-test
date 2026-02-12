@@ -31,7 +31,7 @@ const Home: React.FC = () => {
               We Treat Every Project<br/> Like It’s Our Own Home.
             </h1>
             <p className="text-lg md:text-xl text-stone-100 mb-10 font-light max-w-2xl mx-auto leading-relaxed drop-shadow-md">
-              Serving Oxford County, Waterloo Region, and Mid-Western New Brunswick with high-quality craftsmanship, hands-on accountability, and trust built over decades.
+              Serving Oxford County, Waterloo Region, and Mid-Western New Brunswick with high-quality craftsmanship, hands-on accountability, and trust.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 justify-center">
               <Link 
