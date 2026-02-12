@@ -5,8 +5,9 @@ import { Shield, Award, Users, GraduationCap } from 'lucide-react';
 const About: React.FC = () => {
   return (
     <>
-       <div className="bg-stone-900 py-32 px-4 relative flex items-center justify-center">
-         <div className="absolute inset-0 opacity-10 bg-[url('/about-header.jpg')] bg-cover bg-center"></div>
+       <div className="bg-stone-900 py-32 px-4 relative flex items-center justify-center overflow-hidden">
+         <div className="absolute inset-0 bg-[url('/about-header.jpg')] bg-cover bg-top bg-no-repeat"></div>
+         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60"></div>
         <div className="max-w-7xl mx-auto text-center relative z-10 animate-slide-up">
           <span className="text-brand-400 font-bold tracking-widest text-xs uppercase mb-4 block">Our Story</span>
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6">Family-Run. Owner-Operated.</h1>
