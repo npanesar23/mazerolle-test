@@ -6,7 +6,7 @@ const About: React.FC = () => {
   return (
     <>
        <div className="bg-stone-900 py-32 px-4 relative flex items-center justify-center">
-         <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center"></div>
+         <div className="absolute inset-0 opacity-10 bg-[url('/about-header.jpg')] bg-cover bg-center"></div>
         <div className="max-w-7xl mx-auto text-center relative z-10 animate-slide-up">
           <span className="text-brand-400 font-bold tracking-widest text-xs uppercase mb-4 block">Our Story</span>
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6">Family-Run. Owner-Operated.</h1>
