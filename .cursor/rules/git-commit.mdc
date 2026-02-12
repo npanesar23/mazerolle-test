@@ -1,0 +1,20 @@
+---
+description: Always commit to main only; no other branches, no pushes
+alwaysApply: true
+---
+
+# Git Commit Rule
+
+After making any code or content changes to this project, **always** commit directly to `main`.
+
+## Workflow
+
+1. **Stage changes**: `git add` the modified files
+2. **Commit to main**: `git commit` with a clear, descriptive message
+
+## Constraints
+
+- **Commit to main only**—do not create or use feature branches
+- **No pushes**—do not push to remote; only commit locally
+- Ensure untracked files (e.g. new images) are included in the commit
+- Do not skip this step—treat committing as part of completing the task
