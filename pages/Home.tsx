@@ -223,10 +223,10 @@ const Home: React.FC = () => {
         </div>
 
         <div className="max-w-4xl mx-auto text-center mb-20 animate-slide-up relative z-10">
-          <span className="text-brand-700 font-bold tracking-widest text-xs uppercase mb-3 block">How We Work</span>
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-800 mb-6">Our Simple, Transparent Process</h2>
+          <span className="text-brand-700 font-bold tracking-widest text-xs uppercase mb-3 block">Our Process</span>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-800 mb-6">A Clear Path to Your Perfect Space</h2>
           <p className="text-stone-600 text-lg max-w-2xl mx-auto">
-            We believe in eliminating uncertainty. From the first call to the final walkthrough, here is exactly what you can expect.
+            Built on Communication and Craftsmanship.
           </p>
         </div>
 
@@ -236,11 +236,11 @@ const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4">
             {[
-              { icon: Phone, title: "Contact", desc: "Reach out via phone or form to discuss your vision." },
-              { icon: ClipboardList, title: "Consultation", desc: "We meet on-site to align on scope and budget." },
-              { icon: CalendarDays, title: "Planning", desc: "Detailed scheduling, permits, and material selection." },
-              { icon: HardHat, title: "Construction", desc: "Our team builds with precision and daily oversight." },
-              { icon: Key, title: "Completion", desc: "Final walkthrough and handover of your new space." },
+              { icon: Phone, title: "Share Your Vision", desc: "Tell us your ideas, goals, and inspiration." },
+              { icon: ClipboardList, title: "Consultation & Project Review", desc: "Discuss scope, budget, and timeline together." },
+              { icon: CalendarDays, title: "Planning & Preparation", desc: "We handle drawings, permits, and scheduling." },
+              { icon: HardHat, title: "Expert Construction", desc: "We build safely, efficiently, and with quality craftsmanship." },
+              { icon: Key, title: "Enjoy Your Space", desc: "Relax and enjoy your beautifully finished space." },
             ].map((step, idx) => (
               <div key={idx} className="relative flex flex-col items-center text-center group" style={{ animationDelay: `${idx * 100}ms` }}>
                  {/* Step Number Background */}
@@ -270,15 +270,12 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/wood-pattern.png')]"></div>
         
         <div className="relative z-10 animate-slide-up">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">Ready to Build Something Great?</h2>
-          <p className="text-brand-100 text-xl mb-10 max-w-2xl mx-auto">
-            Contact us today for a free estimate. We serve homeowners and investors in Ontario and New Brunswick who value quality craftsmanship.
-          </p>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-10">Ready to Build Something Great?</h2>
           <Link 
             to="/contact" 
             className="inline-block bg-white text-brand-800 hover:bg-stone-50 px-12 py-5 rounded-sm text-lg font-bold shadow-2xl transition-all hover:-translate-y-1 hover:shadow-white/20"
           >
-            Get Your Free Estimate
+            Get Your No Obligation Estimate Today
           </Link>
         </div>
       </Section>
