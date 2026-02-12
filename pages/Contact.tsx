@@ -192,7 +192,7 @@ const Contact: React.FC = () => {
                   <div>
                     <label htmlFor="attachments" className="block text-sm font-medium text-stone-700 mb-2 flex items-center">
                       <Paperclip size={18} className="mr-2 text-stone-500" />
-                      Attach Files (Sketches, Drawings, Building Plans, etc.)
+                      Attach Files (Sketches, Drawings, Building Plans)
                     </label>
                     <input
                       type="file"
