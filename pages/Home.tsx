@@ -60,10 +60,10 @@ const Home: React.FC = () => {
             </h2>
             <div className="prose prose-lg text-stone-600 mb-8">
                <p className="mb-4 leading-relaxed">
-                  Mazerolle Builders Ltd. is not a corporate construction firm where you’re just a number. We are a father-and-son team, owned and operated by Roger and Shane Mazerolle.
+                  Mazerolle Builders Ltd. is not a corporate construction firm where you’re just a number. We're a client-focused team, owned and operated by the Mazerolle family.
                </p>
                <p className="leading-relaxed">
-                  From new builds to complex renovations, we don't just manage the project from a distance. We are there, ensuring every beam is level and every detail meets our high standards.
+                  Whether it's a new build or a complex renovation, we're on site and involved, making sure every beam is level and every detail lives up to our high standards.
                </p>
             </div>
             
