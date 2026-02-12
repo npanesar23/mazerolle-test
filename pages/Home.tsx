@@ -94,8 +94,8 @@ const Home: React.FC = () => {
       {/* Why Choose Us */}
       <Section bg="light">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-slide-up">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-800 mb-4">Why Choose Mazerolle?</h2>
-          <p className="text-stone-600 text-lg">We are not competing on price. We compete on quality, care, and the peace of mind that comes from hiring builders who truly care.</p>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-800 mb-4">Why Choose Mazerolle Builders?</h2>
+          <p className="text-stone-600 text-lg">We don't cut corners. We build with quality craftsmanship designed to stand the test of time—giving you peace of mind that comes from hiring builders who truly care.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -103,7 +103,7 @@ const Home: React.FC = () => {
             {
               icon: <HardHat className="text-brand-700" size={32} />,
               title: "Owner-Operated",
-              desc: "Roger and Shane are personally involved. No passing the buck. We take full accountability."
+              desc: "As a family-operated business, we are on the front lines of every job. No excuses, no hand-offs—just total accountability from our family to yours."
             },
             {
               icon: <HomeIcon className="text-brand-700" size={32} />,
@@ -123,12 +123,12 @@ const Home: React.FC = () => {
             {
               icon: <div className="font-serif font-bold text-2xl text-brand-700">30+</div>,
               title: "Years of Experience",
-              desc: "Decades of expertise across multiple provinces, including building inspection certification."
+              desc: "Decades of combined experience across multiple provinces and projects."
             },
             {
               icon: <MessageSquare className="text-brand-700" size={32} />,
               title: "Clear Communication",
-              desc: "We keep you informed at every stage. No ghosts, no surprises, just honest updates."
+              desc: "We keep you informed at every stage of your project, delivering honest updates and full transparency from planning to completion."
             }
           ].map((feature, idx) => (
             <div key={idx} className="bg-white p-8 rounded-sm shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-brand-700 group hover:-translate-y-1">
