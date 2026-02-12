@@ -72,7 +72,7 @@ const Home: React.FC = () => {
                 <MapPin className="text-brand-700 mt-1 mr-4 shrink-0" size={24} />
                 <div>
                    <span className="text-stone-900 font-bold block mb-1 text-lg">Our Service Areas</span>
-                   <span className="text-stone-600">Waterloo Region, Oxford County, Surrounding Areas & New Brunswick</span>
+                   <span className="text-stone-600">Oxford County, Waterloo Region, Surrounding Areas & Mid-Western New Brunswick</span>
                 </div>
               </div>
             </div>
