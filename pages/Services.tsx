@@ -30,7 +30,7 @@ const Services: React.FC = () => {
                 <div className="p-3 bg-brand-50 rounded-sm mr-4 text-brand-700 shadow-sm">
                   <Home size={32} />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-800">Ontario New Builds</h2>
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-800">New Builds (ON)</h2>
               </div>
               <p className="text-lg text-stone-600 mb-6 leading-relaxed">
                 Whether you're building your dream tiny home, a new garage, or an industrial shop, we provide end-to-end construction services tailored to your vision. Backed by strong framing expertise, we build efficiently and deliver durable, beautifully crafted accessory structures designed to last.
