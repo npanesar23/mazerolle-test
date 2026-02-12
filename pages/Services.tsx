@@ -8,7 +8,7 @@ const Services: React.FC = () => {
     <>
       <div className="bg-stone-900 py-32 px-4 relative overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 opacity-30">
-           <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2000&auto=format&fit=crop" className="w-full h-full object-cover" alt="Background construction" />
+           <img src="/services-header.jpg" className="w-full h-full object-cover" alt="Construction services" />
         </div>
         <div className="absolute inset-0 bg-stone-900/60"></div>
         <div className="max-w-7xl mx-auto text-center relative z-10 animate-slide-up">
