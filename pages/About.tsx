@@ -15,10 +15,10 @@ const About: React.FC = () => {
       </div>
 
       <Section bg="white">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <div className="animate-slide-up">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="animate-slide-up mb-12">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-800 mb-8">Meet The Team</h2>
-            <div className="prose prose-stone text-lg text-stone-600 leading-relaxed">
+            <div className="prose prose-stone text-lg text-stone-600 leading-relaxed text-center max-w-3xl mx-auto">
               <p className="mb-6">
                 Mazerolle Builders Ltd. is a family-run contracting company founded by father-and-son duo Roger and Shane Mazerolle, originally from New Brunswick. Together, they've built the company on the belief that quality work comes from hands-on involvement, personal accountability, and treating every project like it's their own home.
               </p>
@@ -33,7 +33,7 @@ const About: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-4 animate-scale-in max-w-72">
+          <div className="grid grid-cols-1 gap-4 animate-scale-in max-w-72 mx-auto">
             {[
               { img: '/team-roger.jpg', name: 'Roger Mazerolle', role: 'Co-Owner' },
               { img: '/team-shane.jpg', name: 'Shane Mazerolle', role: 'Co-Owner' },
