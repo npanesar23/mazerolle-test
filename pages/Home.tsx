@@ -12,9 +12,9 @@ const Home: React.FC = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2000&auto=format&fit=crop" 
-            alt="Mazerolle Builders custom home exterior" 
-            className="w-full h-full object-cover"
+            src="/hero.jpg" 
+            alt="Mazerolle Builders - Tiny House Lyndhurst" 
+            className="w-full h-full object-cover object-center"
           />
           {/* Enhanced gradient overlay for better text readability */}
           <div className="absolute inset-0 bg-stone-900/60 mix-blend-multiply"></div>
@@ -84,8 +84,12 @@ const Home: React.FC = () => {
           <div className="relative animate-scale-in">
             <div className="absolute -top-6 -left-6 w-32 h-32 bg-brand-100/50 rounded-full z-0"></div>
             <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-stone-200/50 rounded-full z-0"></div>
-            <div className="relative z-10 rounded-sm shadow-2xl bg-stone-200 h-[550px] w-full flex items-center justify-center border-2 border-dashed border-stone-400">
-              <span className="text-stone-500 text-lg font-medium">Image here</span>
+            <div className="relative z-10 rounded-sm shadow-2xl overflow-hidden h-[450px] lg:h-[550px] w-full">
+              <img 
+                src="/trust-section.jpg" 
+                alt="Mazerolle Builders at work" 
+                className="w-full h-full object-cover object-center"
+              />
             </div>
           </div>
         </div>
