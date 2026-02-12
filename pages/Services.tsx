@@ -52,7 +52,10 @@ const Services: React.FC = () => {
 
           {/* New Brunswick New Builds */}
           <div id="new-builds-nb" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center pt-10 -mt-10">
-            <div className="order-2 lg:order-1 animate-slide-up">
+            <div className="order-1 lg:order-1 h-[500px] animate-scale-in">
+              <img src="/new-builds-nb.jpg" alt="New Brunswick new builds - Perth Pavillion" className="w-full h-full object-cover rounded-sm shadow-xl" />
+            </div>
+            <div className="order-2 lg:order-2 animate-slide-up">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-brand-50 rounded-sm mr-4 text-brand-700 shadow-sm">
                   <Home size={32} />
@@ -72,17 +75,11 @@ const Services: React.FC = () => {
               </ul>
               <Link to="/contact" className="text-brand-700 font-bold hover:underline text-lg">Request an Estimate for New Construction</Link>
             </div>
-            <div className="order-1 lg:order-2 h-[500px] animate-scale-in">
-              <img src="/new-builds-nb.jpg" alt="New Brunswick new builds - Perth Pavillion" className="w-full h-full object-cover rounded-sm shadow-xl" />
-            </div>
           </div>
 
           {/* Renovations */}
           <div id="renovations" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center pt-10 -mt-10">
-             <div className="order-1 h-[500px] animate-scale-in">
-              <img src="/renovations.jpg" alt="Renovation work" className="w-full h-full object-cover rounded-sm shadow-xl" />
-            </div>
-            <div className="order-2 animate-slide-up">
+            <div className="order-2 lg:order-1 animate-slide-up">
               <div className="flex items-center mb-6">
                  <div className="p-3 bg-brand-50 rounded-sm mr-4 text-brand-700 shadow-sm">
                   <Hammer size={32} />
@@ -102,11 +99,17 @@ const Services: React.FC = () => {
               </ul>
               <Link to="/contact" className="text-brand-700 font-bold hover:underline text-lg">Discuss Your Renovation</Link>
             </div>
+            <div className="order-1 lg:order-2 h-[500px] animate-scale-in">
+              <img src="/renovations.jpg" alt="Renovation work" className="w-full h-full object-cover rounded-sm shadow-xl" />
+            </div>
           </div>
 
           {/* General Contracting */}
           <div id="general-contracting" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center pt-10 -mt-10">
-            <div className="order-2 lg:order-1 animate-slide-up">
+            <div className="order-1 lg:order-1 h-[500px] animate-scale-in">
+              <img src="/general-contracting.jpg" alt="General contracting" className="w-full h-full object-cover rounded-sm shadow-xl" />
+            </div>
+            <div className="order-2 lg:order-2 animate-slide-up">
               <div className="flex items-center mb-6">
                  <div className="p-3 bg-brand-50 rounded-sm mr-4 text-brand-700 shadow-sm">
                   <HardHat size={32} />
@@ -125,9 +128,6 @@ const Services: React.FC = () => {
                 ))}
               </ul>
               <Link to="/contact" className="text-brand-700 font-bold hover:underline text-lg">Start Your Project</Link>
-            </div>
-            <div className="order-1 lg:order-2 h-[500px] animate-scale-in">
-              <img src="/general-contracting.jpg" alt="General contracting" className="w-full h-full object-cover rounded-sm shadow-xl" />
             </div>
           </div>
 
