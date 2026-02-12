@@ -121,8 +121,8 @@ const Home: React.FC = () => {
               desc: "WSIB coverage, General Liability insurance, and First Aid trained staff for your peace of mind."
             },
             {
-              icon: <div className="font-serif font-bold text-2xl text-brand-700">30+</div>,
-              title: "Years of Experience",
+              icon: <div className="font-serif font-bold text-2xl text-brand-700">Decades</div>,
+              title: "of Combined Experience",
               desc: "Decades of combined experience across multiple provinces and projects."
             },
             {
