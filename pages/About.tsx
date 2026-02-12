@@ -33,7 +33,7 @@ const About: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 animate-scale-in">
+          <div className="grid grid-cols-1 gap-4 animate-scale-in">
             {[
               { img: '/team-roger.jpg', name: 'Roger Mazerolle', role: 'Co-Owner' },
               { img: '/team-shane.jpg', name: 'Shane Mazerolle', role: 'Co-Owner' },
