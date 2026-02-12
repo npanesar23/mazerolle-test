@@ -201,7 +201,7 @@ const Layout: React.FC = () => {
         <div className="border-t border-stone-800 bg-stone-950 py-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-xs text-stone-500">© {new Date().getFullYear()} Mazerolle Builders Ltd. All rights reserved.</p>
-            <p className="text-xs text-stone-600 mt-2 md:mt-0">Built on Trust & Craftsmanship.</p>
+            <a href="https://www.meridianadvertisinggroup.com/" target="_blank" rel="noopener noreferrer" className="text-xs text-stone-600 hover:text-brand-400 transition-colors mt-2 md:mt-0">Designed by Nitish Panesar</a>
           </div>
         </div>
       </footer>
