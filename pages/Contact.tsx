@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center animate-slide-up">
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Start Your Project</h1>
           <p className="text-brand-100 text-lg max-w-2xl mx-auto">
-            Contact us for a free quote. We serve homeowners and businesses who value quality.
+            Contact us for a free estimate. We serve homeowners and businesses who value quality.
           </p>
         </div>
       </div>

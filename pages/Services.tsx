@@ -43,7 +43,7 @@ const Services: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              <Link to="/contact" className="text-brand-700 font-bold hover:underline text-lg">Request a Quote for New Construction</Link>
+              <Link to="/contact" className="text-brand-700 font-bold hover:underline text-lg">Request an Estimate for New Construction</Link>
             </div>
             <div className="order-1 lg:order-2 h-[500px] animate-scale-in">
               <div className="w-full h-full bg-stone-200 border-2 border-dashed border-stone-400 rounded-sm shadow-xl flex items-center justify-center">
@@ -139,7 +139,7 @@ const Services: React.FC = () => {
         <div className="animate-slide-up">
           <h2 className="text-3xl font-serif font-bold text-white mb-6">No Hidden Fees. No Pricing Surprises.</h2>
           <p className="text-brand-100 max-w-2xl mx-auto mb-10 text-lg">
-            We don't put pricing on our site because every project is unique. We provide detailed, honest quotes after understanding your specific needs.
+            We don't put pricing on our site because every project is unique. We provide detailed, honest estimates after understanding your specific needs.
           </p>
           <Link to="/contact" className="bg-white text-brand-800 px-10 py-4 rounded-sm font-bold hover:bg-stone-100 transition-all shadow-lg hover:-translate-y-1">
             Schedule a Consultation

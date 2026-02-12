@@ -38,7 +38,7 @@ const Home: React.FC = () => {
                 to="/contact" 
                 className="inline-flex items-center justify-center bg-brand-700 hover:bg-brand-600 text-white px-10 py-4 text-lg font-medium rounded-sm transition-all duration-300 shadow-xl hover:shadow-brand-900/40 hover:-translate-y-1"
               >
-                Get a Free Quote
+                Get a Free Estimate
               </Link>
               <Link 
                 to="/projects" 
@@ -272,13 +272,13 @@ const Home: React.FC = () => {
         <div className="relative z-10 animate-slide-up">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">Ready to Build Something Great?</h2>
           <p className="text-brand-100 text-xl mb-10 max-w-2xl mx-auto">
-            Contact us today for a free quote. We serve homeowners and investors in Ontario and New Brunswick who value quality craftsmanship.
+            Contact us today for a free estimate. We serve homeowners and investors in Ontario and New Brunswick who value quality craftsmanship.
           </p>
           <Link 
             to="/contact" 
             className="inline-block bg-white text-brand-800 hover:bg-stone-50 px-12 py-5 rounded-sm text-lg font-bold shadow-2xl transition-all hover:-translate-y-1 hover:shadow-white/20"
           >
-            Get Your Free Quote
+            Get Your Free Estimate
           </Link>
         </div>
       </Section>

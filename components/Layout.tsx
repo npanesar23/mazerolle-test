@@ -2,11 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { Menu, X, Instagram, Facebook } from 'lucide-react';
 
-const LogoIcon = () => (
-  <svg viewBox="0 0 200 80" className="h-12 md:h-14 w-auto text-brand-700 fill-current">
-    {/* Stylized Roofline matching the provided logo image */}
-    <path d="M10 50 L100 10 L190 50 L180 50 L100 15 L20 50 Z" />
-    <path d="M30 50 L100 22 L170 50 L160 50 L100 27 L40 50 Z" />
+const LogoIcon = ({ className = 'text-brand-700', size = 'md' }: { className?: string; size?: 'md' | 'sm' }) => (
+  <svg viewBox="0 0 120 80" className={`w-auto ${size === 'sm' ? 'h-8' : 'h-12 md:h-14'} ${className}`} fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+    <path d="M 18 62 L 48 22" />
+    <path d="M 21 59 L 51 24" />
+    <path d="M 48 22 L 78 62" />
+    <path d="M 51 24 L 75 59" />
+    <path d="M 42 62 L 72 22" />
+    <path d="M 45 59 L 75 24" />
+    <path d="M 72 22 L 102 62" />
+    <path d="M 75 24 L 99 59" />
   </svg>
 );
 
@@ -42,7 +47,7 @@ const Layout: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-3 group" onClick={closeMenu}>
-             <LogoIcon />
+             <LogoIcon className="text-brand-700" />
             <div className="flex flex-col justify-center">
               <span className="text-xl md:text-2xl font-serif font-bold text-brand-700 leading-none tracking-tight">Mazerolle Builders Ltd.</span>
               <span className="text-[0.6rem] md:text-[0.65rem] text-stone-600 font-medium tracking-wider uppercase mt-1">
@@ -69,7 +74,7 @@ const Layout: React.FC = () => {
               to="/contact"
               className="ml-4 bg-brand-700 hover:bg-brand-800 text-white px-6 py-2.5 rounded-sm font-medium transition-all duration-300 shadow-md hover:shadow-lg text-sm tracking-wide"
             >
-              Free Quote
+              Free Estimate
             </Link>
           </nav>
 
@@ -109,7 +114,7 @@ const Layout: React.FC = () => {
               className="text-lg font-medium px-4 py-3 border-l-4 border-transparent text-stone-600 hover:bg-stone-50 hover:text-stone-900"
               onClick={closeMenu}
             >
-              Contact / Free Quote
+              Contact / Free Estimate
             </Link>
           </div>
         </div>
@@ -128,10 +133,8 @@ const Layout: React.FC = () => {
             {/* Brand Column */}
             <div className="space-y-6">
               <div className="flex items-center space-x-2">
-                 {/* Simplified Logo for Footer */}
-                 <svg viewBox="0 0 100 40" className="h-8 w-auto text-white fill-current">
-                   <path d="M5 25 L50 5 L95 25 L85 25 L50 12 L15 25 Z" />
-                 </svg>
+                 {/* Logo for Footer */}
+                 <LogoIcon size="sm" className="text-white" />
                 <div>
                   <h3 className="text-lg font-serif font-bold text-white leading-none">MAZEROLLE</h3>
                   <p className="text-[0.6rem] text-brand-400 font-medium tracking-widest uppercase">Builders Ltd.</p>
