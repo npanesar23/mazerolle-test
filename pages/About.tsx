@@ -15,8 +15,8 @@ const About: React.FC = () => {
       </div>
 
       <Section bg="white">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
-          <div className="animate-slide-up flex flex-col">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="animate-slide-up">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-800 mb-8">Meet The Team</h2>
             <div className="prose prose-stone text-lg text-stone-600 leading-relaxed">
               <p className="mb-6">
@@ -33,7 +33,7 @@ const About: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-3 animate-scale-in min-h-0">
+          <div className="flex flex-col gap-3 animate-scale-in">
             {[
               { img: '/team-roger.jpg', name: 'Roger Mazerolle', role: 'Co-Owner', accent: 'brand' },
               { img: '/team-shane.jpg', name: 'Shane Mazerolle', role: 'Co-Owner', accent: 'stone' },
@@ -41,15 +41,15 @@ const About: React.FC = () => {
             ].map((member, i) => (
               <div
                 key={i}
-                className={`flex-1 min-h-0 rounded-lg overflow-hidden shadow-lg border border-stone-200/60 hover:shadow-xl transition-shadow flex flex-row ${
+                className={`h-32 rounded-lg overflow-hidden shadow-lg border border-stone-200/60 hover:shadow-xl transition-shadow flex flex-row ${
                   member.accent === 'brand' ? 'bg-brand-50/30' : 'bg-stone-50'
                 }`}
               >
-                <div className="flex-1 min-w-0 relative overflow-hidden">
+                <div className="flex-1 min-w-0 min-h-0 relative overflow-hidden">
                   <img src={member.img} alt={member.name} className="w-full h-full object-cover object-top" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-4 py-3">
-                    <h3 className="font-serif font-bold text-white text-lg">{member.name}</h3>
-                    <p className="text-xs text-white/90 font-bold uppercase tracking-wide">{member.role}</p>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-3 py-2">
+                    <h3 className="font-serif font-bold text-white text-sm">{member.name}</h3>
+                    <p className="text-[10px] text-white/90 font-bold uppercase tracking-wide">{member.role}</p>
                   </div>
                 </div>
               </div>
