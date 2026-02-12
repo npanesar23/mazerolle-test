@@ -104,11 +104,7 @@ const About: React.FC = () => {
              </ul>
            </div>
            <div className="bg-stone-50 p-10 lg:p-14 rounded-sm border-l-4 border-brand-700 shadow-lg animate-scale-in">
-             <h3 className="font-serif font-bold text-2xl mb-3 text-stone-800">Trusted & Certified</h3>
-             <p className="text-stone-600 mb-10 text-base leading-relaxed max-w-md">
-               Proud members of professional associations that uphold the highest standards in residential construction and renovation.
-             </p>
-             <div className="flex flex-wrap gap-10 lg:gap-14 items-center justify-start">
+             <div className="flex flex-wrap gap-10 lg:gap-14 items-center justify-start mb-10">
                <a href="https://renomark.ca" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center min-h-[80px] px-6 opacity-90 hover:opacity-100 transition-opacity">
                  <img src="https://renomark.ca/wp-content/themes/renomark/images/logo-green-check.svg" alt="RenoMark - Renovate with Confidence" className="h-16 lg:h-20 xl:h-24 w-auto object-contain" />
                </a>
@@ -116,6 +112,10 @@ const About: React.FC = () => {
                  <img src="https://growthzonecmsprodeastus.azureedge.net/sites/32/2017/09/CHBALogo.png" alt="Canadian Home Builders' Association" className="h-14 lg:h-20 xl:h-24 w-auto object-contain" />
                </a>
              </div>
+             <h3 className="font-serif font-bold text-2xl mb-2 text-stone-800">Trusted & Certified</h3>
+             <p className="text-stone-600 text-base leading-relaxed max-w-md">
+               Proud members upholding the highest standards in residential construction.
+             </p>
            </div>
         </div>
       </Section>
