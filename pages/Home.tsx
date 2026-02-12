@@ -122,7 +122,7 @@ const Home: React.FC = () => {
             },
             {
               icon: <Award className="text-brand-700" size={32} />,
-              title: "Decades of Combined Experience",
+              title: "Years of Experience",
               desc: "Decades of combined experience across multiple provinces and projects."
             },
             {
