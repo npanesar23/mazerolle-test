@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2, ShieldCheck, MapPin, HardHat, Home as HomeIcon, MessageSquare, Phone, ClipboardList, CalendarDays, Key } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ShieldCheck, MapPin, HardHat, Home as HomeIcon, MessageSquare, Phone, ClipboardList, CalendarDays, Key, Award } from 'lucide-react';
 import Section from '../components/Section';
 import BeforeAfterSlider from '../components/BeforeAfterSlider';
 
@@ -121,8 +121,8 @@ const Home: React.FC = () => {
               desc: "WSIB coverage, General Liability insurance, and First Aid trained staff for your peace of mind."
             },
             {
-              icon: <div className="font-serif font-bold text-2xl text-brand-700">Decades</div>,
-              title: "of Combined Experience",
+              icon: <Award className="text-brand-700" size={32} />,
+              title: "Decades of Combined Experience",
               desc: "Decades of combined experience across multiple provinces and projects."
             },
             {
