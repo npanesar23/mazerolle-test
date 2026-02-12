@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Section from '../components/Section';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, Paperclip } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -8,12 +8,18 @@ const Contact: React.FC = () => {
     lastName: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
+    files: null as FileList | null
   });
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const target = e.target as HTMLInputElement;
+    if (target.type === 'file') {
+      setFormData({ ...formData, files: target.files });
+    } else {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -62,6 +68,14 @@ const Contact: React.FC = () => {
                     <a href="tel:5068629497" className="flex items-center text-xl hover:text-brand-400 transition-colors">
                       <Phone size={24} className="mr-4 group-hover:scale-110 transition-transform" />
                       506-862-9497
+                    </a>
+                  </div>
+
+                  <div className="group">
+                    <h4 className="font-bold text-white mb-2 flex items-center uppercase tracking-wider text-xs text-brand-500">Email</h4>
+                    <a href="mailto:mazerollebuildersltd@gmail.com" className="flex items-center text-xl hover:text-brand-400 transition-colors break-all">
+                      <Mail size={24} className="mr-4 group-hover:scale-110 transition-transform shrink-0" />
+                      mazerollebuildersltd@gmail.com
                     </a>
                   </div>
 
@@ -173,6 +187,23 @@ const Contact: React.FC = () => {
                       value={formData.message}
                       onChange={handleChange}
                     ></textarea>
+                  </div>
+
+                  <div>
+                    <label htmlFor="attachments" className="block text-sm font-medium text-stone-700 mb-2 flex items-center">
+                      <Paperclip size={18} className="mr-2 text-stone-500" />
+                      Attach files (sketches, drawings, building plans, etc.)
+                    </label>
+                    <input
+                      type="file"
+                      id="attachments"
+                      name="attachments"
+                      multiple
+                      accept="image/*,.pdf,.doc,.docx"
+                      className="w-full px-4 py-3.5 border border-stone-300 rounded-sm focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all file:mr-4 file:py-2 file:px-4 file:rounded-sm file:border-0 file:bg-stone-100 file:text-stone-700 file:cursor-pointer hover:file:bg-stone-200"
+                      onChange={handleChange}
+                    />
+                    <p className="text-stone-500 text-sm mt-1">Images, PDFs, and documents accepted.</p>
                   </div>
 
                   <button
