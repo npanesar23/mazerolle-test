@@ -15,8 +15,8 @@ const About: React.FC = () => {
       </div>
 
       <Section bg="white">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <div className="animate-slide-up">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+          <div className="animate-slide-up flex flex-col">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-800 mb-8">Meet The Team</h2>
             <div className="prose prose-stone text-lg text-stone-600 leading-relaxed">
               <p className="mb-6">
@@ -33,50 +33,24 @@ const About: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-6 animate-scale-in">
+          <div className="flex flex-col gap-3 animate-scale-in min-h-0">
             {[
-              {
-                img: '/team-roger.jpg',
-                name: 'Roger Mazerolle',
-                role: 'Co-Owner',
-                accent: 'brand',
-                points: ['40+ years of carpentry experience', 'Framing to finish work across Canada', 'Building a lasting legacy for generations'],
-              },
-              {
-                img: '/team-shane.jpg',
-                name: 'Shane Mazerolle',
-                role: 'Co-Owner',
-                accent: 'stone',
-                points: ['Runs Ontario operations', 'Tool belt on every jobsite', 'Precision and efficiency in every project'],
-              },
-              {
-                img: '/team-natalie.jpg',
-                name: 'Natalie Mazerolle',
-                role: 'Manager',
-                accent: 'stone',
-                points: ['Business operations and client design vision', 'Timelines on track, budgets under control', 'Keeps the whole team working efficiently'],
-              },
+              { img: '/team-roger.jpg', name: 'Roger Mazerolle', role: 'Co-Owner', accent: 'brand' },
+              { img: '/team-shane.jpg', name: 'Shane Mazerolle', role: 'Co-Owner', accent: 'stone' },
+              { img: '/team-natalie.jpg', name: 'Natalie Mazerolle', role: 'Manager', accent: 'stone' },
             ].map((member, i) => (
               <div
                 key={i}
-                className={`rounded-lg overflow-hidden shadow-lg border border-stone-200/60 hover:shadow-xl transition-shadow flex flex-row ${
-                  member.accent === 'brand' ? 'bg-brand-50/50' : 'bg-stone-50'
+                className={`flex-1 min-h-0 rounded-lg overflow-hidden shadow-lg border border-stone-200/60 hover:shadow-xl transition-shadow flex flex-row ${
+                  member.accent === 'brand' ? 'bg-brand-50/30' : 'bg-stone-50'
                 }`}
               >
-                <div className="w-28 sm:w-36 shrink-0 aspect-[3/4] overflow-hidden">
+                <div className="flex-1 min-w-0 relative overflow-hidden">
                   <img src={member.img} alt={member.name} className="w-full h-full object-cover object-top" />
-                </div>
-                <div className={`p-4 sm:p-5 flex-1 flex flex-col min-w-0 ${member.accent === 'brand' ? 'border-l-4 border-brand-700' : 'border-l-4 border-stone-300'}`}>
-                  <h3 className="font-serif font-bold text-xl text-stone-800 mb-0.5">{member.name}</h3>
-                  <p className="text-xs text-brand-700 font-bold uppercase tracking-wide mb-3">{member.role}</p>
-                  <ul className="space-y-1.5 text-sm text-stone-600 flex-1">
-                    {member.points.map((point, j) => (
-                      <li key={j} className="flex items-start gap-2">
-                        <span className={`w-1.5 h-1.5 rounded-full shrink-0 mt-1.5 ${member.accent === 'brand' ? 'bg-brand-700' : 'bg-stone-500'}`} />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-4 py-3">
+                    <h3 className="font-serif font-bold text-white text-lg">{member.name}</h3>
+                    <p className="text-xs text-white/90 font-bold uppercase tracking-wide">{member.role}</p>
+                  </div>
                 </div>
               </div>
             ))}
