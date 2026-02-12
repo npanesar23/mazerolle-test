@@ -95,7 +95,7 @@ const Home: React.FC = () => {
       <Section bg="light">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-slide-up">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-800 mb-4">Why Choose Mazerolle Builders?</h2>
-          <p className="text-stone-600 text-lg">We don't cut corners. We build with quality craftsmanship designed to stand the test of time—giving you peace of mind that comes from hiring builders who truly care.</p>
+          <p className="text-stone-600 text-lg">We don't cut corners. We build with quality craftsmanship designed to stand the test of time, giving you peace of mind that comes from hiring builders who truly care.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -103,7 +103,7 @@ const Home: React.FC = () => {
             {
               icon: <HardHat className="text-brand-700" size={32} />,
               title: "Owner-Operated",
-              desc: "As a family-operated business, we are on the front lines of every job. No excuses, no hand-offs—just total accountability from our family to yours."
+              desc: "As a family-operated business, we are on the front lines of every job. No excuses, no hand-offs, just total accountability from our family to yours."
             },
             {
               icon: <HomeIcon className="text-brand-700" size={32} />,
