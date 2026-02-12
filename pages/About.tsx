@@ -33,7 +33,7 @@ const About: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-4 animate-scale-in">
+          <div className="grid grid-cols-1 gap-4 animate-scale-in max-w-44">
             {[
               { img: '/team-roger.jpg', name: 'Roger Mazerolle', role: 'Co-Owner' },
               { img: '/team-shane.jpg', name: 'Shane Mazerolle', role: 'Co-Owner' },
@@ -41,7 +41,7 @@ const About: React.FC = () => {
             ].map((member, i) => (
               <div
                 key={i}
-                className="aspect-square rounded-xl overflow-hidden shadow-lg border border-stone-200/60 bg-stone-100 hover:shadow-xl transition-shadow"
+                className="aspect-square rounded-xl overflow-hidden shadow-lg border border-stone-200/60 bg-stone-100 hover:shadow-xl transition-shadow w-full"
               >
                 <div className="w-full h-full relative">
                   <img
@@ -49,9 +49,9 @@ const About: React.FC = () => {
                     alt={member.name}
                     className="w-full h-full object-cover object-center"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent px-4 py-3">
-                    <h3 className="font-serif font-bold text-white text-base">{member.name}</h3>
-                    <p className="text-[10px] text-white/90 font-bold uppercase tracking-wide">{member.role}</p>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent px-2 py-2">
+                    <h3 className="font-serif font-bold text-white text-sm">{member.name}</h3>
+                    <p className="text-[9px] text-white/90 font-bold uppercase tracking-wide">{member.role}</p>
                   </div>
                 </div>
               </div>
