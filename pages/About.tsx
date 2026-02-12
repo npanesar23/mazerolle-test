@@ -103,13 +103,19 @@ const About: React.FC = () => {
                ))}
              </ul>
            </div>
-           <div className="bg-stone-50 p-12 rounded-sm border-l-4 border-brand-700 shadow-lg animate-scale-in flex flex-wrap gap-8 items-center justify-center py-12">
-             <a href="https://renomark.ca" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-24 px-8 opacity-90 hover:opacity-100 transition-opacity">
-               <img src="https://renomark.ca/wp-content/themes/renomark/images/logo-green-check.svg" alt="RenoMark - Renovate with Confidence" className="h-20 w-auto object-contain" />
-             </a>
-             <a href="https://www.chba.ca" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-24 px-8 opacity-90 hover:opacity-100 transition-opacity">
-               <img src="https://growthzonecmsprodeastus.azureedge.net/sites/32/2017/09/CHBALogo.png" alt="Canadian Home Builders' Association" className="h-20 w-auto object-contain" />
-             </a>
+           <div className="bg-stone-50 p-10 lg:p-14 rounded-sm border-l-4 border-brand-700 shadow-lg animate-scale-in">
+             <h3 className="font-serif font-bold text-2xl mb-3 text-stone-800">Trusted & Certified</h3>
+             <p className="text-stone-600 mb-10 text-base leading-relaxed max-w-md">
+               Proud members of professional associations that uphold the highest standards in residential construction and renovation.
+             </p>
+             <div className="flex flex-wrap gap-10 lg:gap-14 items-center justify-start">
+               <a href="https://renomark.ca" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center min-h-[80px] px-6 opacity-90 hover:opacity-100 transition-opacity">
+                 <img src="https://renomark.ca/wp-content/themes/renomark/images/logo-green-check.svg" alt="RenoMark - Renovate with Confidence" className="h-16 lg:h-20 xl:h-24 w-auto object-contain" />
+               </a>
+               <a href="https://www.chba.ca" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center min-h-[80px] px-6 opacity-90 hover:opacity-100 transition-opacity">
+                 <img src="https://growthzonecmsprodeastus.azureedge.net/sites/32/2017/09/CHBALogo.png" alt="Canadian Home Builders' Association" className="h-14 lg:h-20 xl:h-24 w-auto object-contain" />
+               </a>
+             </div>
            </div>
         </div>
       </Section>
