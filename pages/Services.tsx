@@ -50,6 +50,33 @@ const Services: React.FC = () => {
             </div>
           </div>
 
+          {/* New Brunswick New Builds */}
+          <div id="new-builds-nb" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center pt-10 -mt-10">
+            <div className="order-2 lg:order-1 animate-slide-up">
+              <div className="flex items-center mb-6">
+                <div className="p-3 bg-brand-50 rounded-sm mr-4 text-brand-700 shadow-sm">
+                  <Home size={32} />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-800">New Builds (NB)</h2>
+              </div>
+              <p className="text-lg text-stone-600 mb-6 leading-relaxed">
+                Our New Brunswick Division is also able to bring your dream home to life! Whether you prefer traditional or log style construction, you can select from our thoughtfully designed plans or work with us to create a custom home that's uniquely yours.
+              </p>
+              <ul className="space-y-4 mb-10">
+                {['New Residential', 'Log Homes and Structures', 'Workshops', 'Garages & Sheds', 'Additions', 'Barns and Potato Houses', 'Residential, Commercial & Agricultural'].map((item, i) => (
+                  <li key={i} className="flex items-center text-stone-700">
+                    <span className="w-2 h-2 bg-brand-600 rounded-full mr-3"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link to="/contact" className="text-brand-700 font-bold hover:underline text-lg">Request an Estimate for New Construction</Link>
+            </div>
+            <div className="order-1 lg:order-2 h-[500px] animate-scale-in">
+              <img src="/new-builds-nb.jpg" alt="New Brunswick new builds - Perth Pavillion" className="w-full h-full object-cover rounded-sm shadow-xl" />
+            </div>
+          </div>
+
           {/* Renovations */}
           <div id="renovations" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center pt-10 -mt-10">
              <div className="order-1 h-[500px] animate-scale-in">
