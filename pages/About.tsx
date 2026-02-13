@@ -77,7 +77,7 @@ const About: React.FC = () => {
              { logos: [
                  { url: 'https://renomark.ca/wp-content/themes/renomark/images/logo-green-check.svg', href: 'https://renomark.ca', alt: 'RenoMark' },
                  { url: 'https://img1.wsimg.com/isteam/ip/f8d25033-2d29-436f-ab08-7b5424b9a57a/OCBA%20Logo%20No%20Background.png', href: 'https://oxfordcountyba.ca', alt: 'OCBA' },
-               ], title: 'Strong Memberships', desc: "Oxford County Builders Association and RenoMark." },
+               ], title: 'Strong Memberships', desc: "Proud members of Oxford County Builders Association and RenoMark." },
            ].map((item, idx) => (
              <div key={idx} className="bg-white p-8 rounded-sm shadow-md hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col items-center text-center">
                {'logos' in item && item.logos ? (
