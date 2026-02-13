@@ -74,10 +74,21 @@ const About: React.FC = () => {
              { icon: Shield, color: 'text-green-700', bg: 'bg-green-100', title: 'Workers Compensation Insurance', desc: "WSIB and WorkSafeNB coverage, provincially regulated protection for all staff." },
              { icon: Award, color: 'text-blue-700', bg: 'bg-blue-100', title: 'Insured', desc: "Comprehensive insurance for a worry free project." },
              { icon: GraduationCap, color: 'text-red-700', bg: 'bg-red-100', title: 'Safety Focused', desc: "Educated and trained staff, strict procedures, and regular meetings to keep everyone safe." },
-             { logo: 'https://img1.wsimg.com/isteam/ip/f8d25033-2d29-436f-ab08-7b5424b9a57a/OCBA%20Logo%20No%20Background.png', href: 'https://oxfordcountyba.ca', title: 'Membership to OCBA', desc: "Oxford County Builders Association member." },
+             { logos: [
+                 { url: 'https://renomark.ca/wp-content/themes/renomark/images/logo-green-check.svg', href: 'https://renomark.ca', alt: 'RenoMark' },
+                 { url: 'https://img1.wsimg.com/isteam/ip/f8d25033-2d29-436f-ab08-7b5424b9a57a/OCBA%20Logo%20No%20Background.png', href: 'https://oxfordcountyba.ca', alt: 'OCBA' },
+               ], title: 'Membership to OCBA & RenoMark', desc: "Oxford County Builders Association and RenoMark members." },
            ].map((item, idx) => (
              <div key={idx} className="bg-white p-8 rounded-sm shadow-md hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col items-center text-center">
-               {'logo' in item && item.logo ? (
+               {'logos' in item && item.logos ? (
+                 <div className="mb-5 flex flex-col gap-3 items-center justify-center">
+                   {item.logos.map((l: { url: string; href: string; alt: string }, i: number) => (
+                     <a key={i} href={l.href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12">
+                       <img src={l.url} alt={l.alt} className="h-10 w-auto object-contain max-w-full" />
+                     </a>
+                   ))}
+                 </div>
+               ) : 'logo' in item && item.logo ? (
                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="mb-5 flex items-center justify-center h-16">
                    <img src={item.logo} alt={item.title} className="h-12 w-auto object-contain max-w-full" />
                  </a>
