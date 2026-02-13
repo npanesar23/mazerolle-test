@@ -158,34 +158,44 @@ const Home: React.FC = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Service 1 */}
-          <Link to="/services" className="group block h-full">
-            <div className="relative overflow-hidden rounded-sm mb-6 h-72 shadow-md bg-stone-200 border-2 border-dashed border-stone-400 flex items-center justify-center">
-              <span className="text-stone-500 text-lg font-medium">Image here</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Service 1 - New Builds (NB) */}
+          <Link to="/services#new-builds-nb" className="group block h-full">
+            <div className="relative overflow-hidden rounded-sm mb-6 h-72 shadow-md">
+              <img src="/comprehensive-new-builds-nb.jpg" alt="New Builds NB - Log Home" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>
-            <h3 className="text-2xl font-serif font-bold text-stone-800 mb-3 group-hover:text-brand-700 transition-colors">New Builds</h3>
-            <p className="text-stone-600 mb-4 line-clamp-3 leading-relaxed">Residential and commercial construction built to last generations. From restaurants to dream homes, we handle the entire process.</p>
+            <h3 className="text-2xl font-serif font-bold text-stone-800 mb-3 group-hover:text-brand-700 transition-colors">New Builds (NB)</h3>
+            <p className="text-stone-600 mb-4 line-clamp-3 leading-relaxed">Our New Brunswick Division brings your dream home to life. Traditional or log style—select from our plans or create a custom home that's uniquely yours.</p>
             <span className="text-brand-700 font-bold text-sm flex items-center group-hover:underline uppercase tracking-wide">Learn more <ArrowRight size={14} className="ml-2" /></span>
           </Link>
 
-          {/* Service 2 */}
-          <Link to="/services" className="group block h-full">
-            <div className="relative overflow-hidden rounded-sm mb-6 h-72 shadow-md bg-stone-200 border-2 border-dashed border-stone-400 flex items-center justify-center">
-              <span className="text-stone-500 text-lg font-medium">Image here</span>
+          {/* Service 2 - Renovations */}
+          <Link to="/services#renovations" className="group block h-full">
+            <div className="relative overflow-hidden rounded-sm mb-6 h-72 shadow-md">
+              <img src="/comprehensive-renos.jpg" alt="Renovations" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>
             <h3 className="text-2xl font-serif font-bold text-stone-800 mb-3 group-hover:text-brand-700 transition-colors">Renovations</h3>
             <p className="text-stone-600 mb-4 line-clamp-3 leading-relaxed">Vision-driven updates for homes and businesses. We minimize disruption while maximizing value and functionality.</p>
             <span className="text-brand-700 font-bold text-sm flex items-center group-hover:underline uppercase tracking-wide">Learn more <ArrowRight size={14} className="ml-2" /></span>
           </Link>
 
-          {/* Service 3 */}
-          <Link to="/services" className="group block h-full">
-            <div className="relative overflow-hidden rounded-sm mb-6 h-72 shadow-md bg-stone-200 border-2 border-dashed border-stone-400 flex items-center justify-center">
-              <span className="text-stone-500 text-lg font-medium">Image here</span>
+          {/* Service 3 - General Contracting */}
+          <Link to="/services#general-contracting" className="group block h-full">
+            <div className="relative overflow-hidden rounded-sm mb-6 h-72 shadow-md">
+              <img src="/comprehensive-gc.jpg" alt="General Contracting" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             </div>
             <h3 className="text-2xl font-serif font-bold text-stone-800 mb-3 group-hover:text-brand-700 transition-colors">General Contracting</h3>
             <p className="text-stone-600 mb-4 line-clamp-3 leading-relaxed">Complete project management. Tell us your vision, and we manage the trades, timelines, and every detail from start to finish.</p>
+            <span className="text-brand-700 font-bold text-sm flex items-center group-hover:underline uppercase tracking-wide">Learn more <ArrowRight size={14} className="ml-2" /></span>
+          </Link>
+
+          {/* Service 4 - New Builds (ON) */}
+          <Link to="/services#new-builds" className="group block h-full">
+            <div className="relative overflow-hidden rounded-sm mb-6 h-72 shadow-md">
+              <img src="/comprehensive-new-builds-on.jpg" alt="New Builds ON - Smerek Garage" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            </div>
+            <h3 className="text-2xl font-serif font-bold text-stone-800 mb-3 group-hover:text-brand-700 transition-colors">New Builds (ON)</h3>
+            <p className="text-stone-600 mb-4 line-clamp-3 leading-relaxed">Unlock the full potential of your property. From initial vision to final occupancy, we design and build accessory structures and additions that integrate seamlessly with your lifestyle.</p>
             <span className="text-brand-700 font-bold text-sm flex items-center group-hover:underline uppercase tracking-wide">Learn more <ArrowRight size={14} className="ml-2" /></span>
           </Link>
         </div>
@@ -206,9 +216,9 @@ const Home: React.FC = () => {
         
         <div className="max-w-4xl mx-auto shadow-2xl rounded-lg overflow-hidden animate-scale-in">
           <BeforeAfterSlider 
-            beforeImage="placeholder"
-            afterImage="placeholder"
-            alt="Living room renovation"
+            beforeImage="/before-after-before.jpg"
+            afterImage="/before-after-after.jpg"
+            alt="Cutchies Tap and Grill transformation"
           />
         </div>
          <div className="text-center mt-12">
