@@ -12,6 +12,8 @@ const Contact: React.FC = () => {
     files: null as FileList | null
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const target = e.target as HTMLInputElement;
@@ -20,15 +22,38 @@ const Contact: React.FC = () => {
     } else {
       setFormData({ ...formData, [e.target.name]: e.target.value });
     }
+    setError(null);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Simulate form submission
-    setTimeout(() => {
-      setSubmitted(true);
-      window.scrollTo(0, 0);
-    }, 500);
+    setSubmitting(true);
+    setError(null);
+    try {
+      const form = e.currentTarget;
+      const formDataToSend = new FormData(form);
+      formDataToSend.append('_subject', `New inquiry from ${formData.firstName} ${formData.lastName}`);
+      formDataToSend.append('_template', 'table');
+
+      const response = await fetch('https://formsubmit.co/mazerollebuildersltd@gmail.com', {
+        method: 'POST',
+        body: formDataToSend,
+        headers: { Accept: 'application/json' }
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ firstName: '', lastName: '', email: '', phone: '', message: '', files: null });
+        window.scrollTo(0, 0);
+      } else {
+        const data = await response.json();
+        setError(data.message || 'Something went wrong. Please try again or email us directly.');
+      }
+    } catch {
+      setError('Unable to send message. Please try again or email us directly at mazerollebuildersltd@gmail.com');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -120,6 +145,7 @@ const Contact: React.FC = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-8">
+                  <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
                   <h3 className="text-3xl font-serif font-bold text-stone-800 mb-8">Send us a Message</h3>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -206,11 +232,18 @@ const Contact: React.FC = () => {
                     <p className="text-stone-500 text-sm mt-1">Images, PDFs, and documents accepted.</p>
                   </div>
 
+                  {error && (
+                    <div className="p-4 bg-red-50 border border-red-200 rounded-sm text-red-700 text-sm">
+                      {error}
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full bg-brand-700 text-white font-bold py-4 rounded-sm hover:bg-brand-800 transition-all shadow-md text-lg hover:-translate-y-1 hover:shadow-lg"
+                    disabled={submitting}
+                    className="w-full bg-brand-700 text-white font-bold py-4 rounded-sm hover:bg-brand-800 transition-all shadow-md text-lg hover:-translate-y-1 hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                   >
-                    Send Message
+                    {submitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               )}
