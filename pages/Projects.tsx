@@ -21,10 +21,10 @@ const Projects: React.FC = () => {
     },
     {
       id: 3,
-      title: 'Huron Fence',
+      title: 'Balcony Deck and Railing',
       category: 'Outdoor',
       image: '/project-3.jpg',
-      desc: 'Custom fence installation and outdoor structure work built to last.'
+      desc: 'Custom balcony deck with railing. Safe, durable outdoor living space.'
     },
     {
       id: 4,
