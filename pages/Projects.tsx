@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
     },
     {
       id: 5,
-      title: 'Kitchen 4 Plex Church Conversion',
+      title: 'Kitchen Fourplex Conversion',
       category: 'Renovation',
       image: '/project-5.jpg',
       desc: 'Kitchen renovation in a converted church building. Modern finishes in a unique space.'
@@ -28,21 +28,21 @@ const Projects: React.FC = () => {
     },
     {
       id: 1,
-      title: 'Basement Entrance Duplex Breslau',
+      title: 'Basement Entrance Duplex',
       category: 'Renovation',
       image: '/project-1.jpg',
       desc: 'Basement entrance and access work for a duplex conversion. Functional design for multi-unit living.'
     },
     {
       id: 2,
-      title: 'New Non Slip Front Porch Woodstock',
+      title: 'Non Slip Front Porch',
       category: 'Outdoor',
       image: '/project-2.jpg',
       desc: 'Safe, non-slip front porch installation. Durable outdoor entrance upgrade for Woodstock property.'
     },
     {
       id: 3,
-      title: 'Log Playground Anderson Rd NB',
+      title: 'Handmade Log Playground',
       category: 'Outdoor',
       image: '/project-3.jpg',
       desc: 'Custom log playground structure in New Brunswick. Natural materials for lasting outdoor fun.'
