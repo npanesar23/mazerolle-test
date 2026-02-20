@@ -110,7 +110,7 @@ const About: React.FC = () => {
            <div className="animate-slide-up">
              <h2 className="text-3xl font-serif font-bold text-stone-800 mb-6">Where We Operate</h2>
              <p className="text-stone-600 mb-8 leading-relaxed text-lg">
-               We are proud to bring our expertise to multiple regions. While our roots are in the Maritimes, we have established a strong reputation in Ontario.
+               We are proud to bring our expertise to multiple regions. We have established a strong reputation in Ontario and New Brunswick.
              </p>
              <ul className="space-y-4">
                {['Waterloo Region', 'Oxford County', 'Surrounding Ontario Areas', 'New Brunswick'].map((area, i) => (
