@@ -125,13 +125,13 @@ const About: React.FC = () => {
                <a href="https://renomark.ca" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center min-h-[80px] px-6 opacity-90 hover:opacity-100 transition-opacity">
                  <img src="https://renomark.ca/wp-content/themes/renomark/images/logo-green-check.svg" alt="RenoMark - Renovate with Confidence" className="h-16 lg:h-20 xl:h-24 w-auto object-contain" />
                </a>
-               <a href="https://www.chba.ca" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center min-h-[80px] px-6 opacity-90 hover:opacity-100 transition-opacity">
-                 <img src="https://growthzonecmsprodeastus.azureedge.net/sites/32/2017/09/CHBALogo.png" alt="Canadian Home Builders' Association" className="h-14 lg:h-20 xl:h-24 w-auto object-contain" />
+               <a href="https://oxfordcountyba.ca" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center min-h-[80px] px-6 opacity-90 hover:opacity-100 transition-opacity">
+                 <img src="https://img1.wsimg.com/isteam/ip/f8d25033-2d29-436f-ab08-7b5424b9a57a/OCBA%20Logo%20No%20Background.png" alt="Oxford County Builders Association" className="h-14 lg:h-20 xl:h-24 w-auto object-contain" />
                </a>
              </div>
              <h3 className="font-serif font-bold text-2xl mb-2 text-stone-800">Trusted & Certified</h3>
              <p className="text-stone-600 text-base leading-relaxed max-w-md">
-               Proud RenoMark and Canadian Home Builders' Association members upholding the highest standards.
+               Proud members of the Oxford County Builders Association and RenoMark upholding the highest standards.
              </p>
            </div>
         </div>
