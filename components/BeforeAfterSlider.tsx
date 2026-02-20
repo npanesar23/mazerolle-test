@@ -22,6 +22,28 @@ const BeforeAfterSlider: React.FC<BeforeAfterProps> = ({ beforeImage, afterImage
     }
   }, []);
 
+  // Native touch listener - must run before React's to prevent zoom (passive: false)
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const preventZoom = (e: Event) => e.preventDefault();
+    const onTouchStart = (e: TouchEvent) => {
+      e.preventDefault();
+      setIsDragging(true);
+      handleMove(e.touches[0].clientX);
+    };
+    el.addEventListener('touchstart', onTouchStart, { passive: false, capture: true });
+    (el as HTMLElement).addEventListener('gesturestart', preventZoom, { passive: false, capture: true });
+    (el as HTMLElement).addEventListener('gesturechange', preventZoom, { passive: false, capture: true });
+    (el as HTMLElement).addEventListener('gestureend', preventZoom, { passive: false, capture: true });
+    return () => {
+      el.removeEventListener('touchstart', onTouchStart);
+      (el as HTMLElement).removeEventListener('gesturestart', preventZoom);
+      (el as HTMLElement).removeEventListener('gesturechange', preventZoom);
+      (el as HTMLElement).removeEventListener('gestureend', preventZoom);
+    };
+  }, [handleMove]);
+
   const onMouseMove = useCallback((e: MouseEvent) => {
     if (isDragging) handleMove(e.clientX);
   }, [isDragging, handleMove]);
@@ -57,11 +79,6 @@ const BeforeAfterSlider: React.FC<BeforeAfterProps> = ({ beforeImage, afterImage
       onMouseDown={(e) => {
         setIsDragging(true);
         handleMove(e.clientX);
-      }}
-      onTouchStart={(e) => {
-        e.preventDefault();
-        setIsDragging(true);
-        handleMove(e.touches[0].clientX);
       }}
     >
       {/* After Image (Background) */}
@@ -101,12 +118,12 @@ const BeforeAfterSlider: React.FC<BeforeAfterProps> = ({ beforeImage, afterImage
         )}
       </div>
 
-      {/* Slider Handle */}
+      {/* Slider Handle - touch-none prevents zoom when dragging */}
       <div 
-        className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize z-10 shadow-[0_0_10px_rgba(0,0,0,0.5)]"
+        className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize z-10 shadow-[0_0_10px_rgba(0,0,0,0.5)] touch-none"
         style={{ left: `${sliderPosition}%` }}
       >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg text-brand-700">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg text-brand-700 touch-none">
            <MoveHorizontal size={20} />
         </div>
       </div>
