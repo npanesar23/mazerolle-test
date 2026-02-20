@@ -122,6 +122,32 @@ const Projects: React.FC = () => {
               <p className="text-stone-600">Complete bathroom transformation with modern finishes.</p>
             </div>
           </div>
+          <div className="animate-scale-in" style={{ animationDelay: '0.3s' }}>
+            <div className="shadow-2xl rounded-lg overflow-hidden border-4 border-white">
+              <BeforeAfterSlider 
+                beforeImage="/projects-before-after-3-before.jpg"
+                afterImage="/projects-before-after-3-after.jpg"
+                alt="Laurel Street Closets"
+              />
+            </div>
+            <div className="mt-8 text-center">
+              <h3 className="font-bold text-xl text-stone-800 mb-2">Laurel Street Closets</h3>
+              <p className="text-stone-600">Custom closet renovation for improved storage and organization.</p>
+            </div>
+          </div>
+          <div className="animate-scale-in" style={{ animationDelay: '0.4s' }}>
+            <div className="shadow-2xl rounded-lg overflow-hidden border-4 border-white">
+              <BeforeAfterSlider 
+                beforeImage="/projects-before-after-4-before.jpg"
+                afterImage="/projects-before-after-4-after.jpg"
+                alt="Pioneer Tower Living Room"
+              />
+            </div>
+            <div className="mt-8 text-center">
+              <h3 className="font-bold text-xl text-stone-800 mb-2">Pioneer Tower Living Room</h3>
+              <p className="text-stone-600">Living room transformation with modern open-concept design.</p>
+            </div>
+          </div>
         </div>
       </Section>
       
