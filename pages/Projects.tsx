@@ -99,7 +99,7 @@ const Projects: React.FC = () => {
                 beforeImage="/projects-before-after-2-before.jpg"
                 afterImage="/projects-before-after-2-after.jpg"
                 alt="Puslinch Structural Repair"
-                beforeImagePosition="center top"
+                beforeImagePosition="50% 5%"
               />
             </div>
             <div className="mt-8 text-center">
