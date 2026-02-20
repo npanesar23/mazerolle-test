@@ -52,7 +52,9 @@ const Projects: React.FC = () => {
   return (
     <>
       <div className="bg-stone-900 py-32 px-4 relative flex items-center justify-center">
-         <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center"></div>
+         <div className="absolute inset-0 z-0 opacity-20">
+           <img src="/projects-header.jpg" alt="" className="w-full h-full object-cover object-center" />
+        </div>
         <div className="max-w-7xl mx-auto text-center relative z-10 animate-slide-up">
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6">Our Work</h1>
           <p className="text-stone-300 text-xl max-w-2xl mx-auto">
