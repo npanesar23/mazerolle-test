@@ -257,8 +257,8 @@ const Home: React.FC = () => {
               { icon: Key, title: "Enjoy Your Space", desc: "Relax and enjoy your beautifully finished space." },
             ].map((step, idx) => (
               <div key={idx} className="relative flex flex-col items-center text-center group" style={{ animationDelay: `${idx * 100}ms` }}>
-                 {/* Step Number Background */}
-                 <div className="absolute -top-6 text-8xl font-serif font-bold text-stone-50 select-none -z-10 group-hover:text-brand-50 transition-colors duration-300">
+                 {/* Step Number Background - hidden on mobile to prevent z-index bleed between stacked steps */}
+                 <div className="absolute -top-6 text-8xl font-serif font-bold text-stone-50 select-none -z-10 group-hover:text-brand-50 transition-colors duration-300 hidden md:block">
                     0{idx + 1}
                  </div>
                  
