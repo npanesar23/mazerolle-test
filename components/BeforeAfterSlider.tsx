@@ -5,9 +5,10 @@ interface BeforeAfterProps {
   beforeImage: string;
   afterImage: string;
   alt: string;
+  beforeImagePosition?: string;
 }
 
-const BeforeAfterSlider: React.FC<BeforeAfterProps> = ({ beforeImage, afterImage, alt }) => {
+const BeforeAfterSlider: React.FC<BeforeAfterProps> = ({ beforeImage, afterImage, alt, beforeImagePosition }) => {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -86,7 +87,10 @@ const BeforeAfterSlider: React.FC<BeforeAfterProps> = ({ beforeImage, afterImage
             src={beforeImage} 
             alt={`Before ${alt}`} 
             className="absolute top-0 left-0 max-w-none h-full object-cover" 
-            style={{ width: containerRef.current ? containerRef.current.clientWidth : '100%' }} // Keep image static relative to container
+            style={{ 
+              width: containerRef.current ? containerRef.current.clientWidth : '100%',
+              objectPosition: beforeImagePosition || 'center'
+            }}
           />
         )}
       </div>
