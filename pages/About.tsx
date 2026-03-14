@@ -1,8 +1,13 @@
 import React from 'react';
 import Section from '../components/Section';
 import { Shield, Award, Users, GraduationCap } from 'lucide-react';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const About: React.FC = () => {
+  usePageMeta(
+    'About Us | Family-Run. Owner-Operated.',
+    'Meet the Mazerolle Builders team: Roger, Shane, and Natalie. Family-run general contracting founded by father-and-son duo. 40+ years experience. Serving Ontario and New Brunswick with quality craftsmanship and hands-on accountability.'
+  );
   return (
     <>
        <div className="bg-stone-900 py-32 px-4 relative flex items-center justify-center overflow-hidden">

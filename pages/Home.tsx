@@ -3,8 +3,13 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, ShieldCheck, MapPin, HardHat, Home as HomeIcon, MessageSquare, Phone, ClipboardList, CalendarDays, Key } from 'lucide-react';
 import Section from '../components/Section';
 import BeforeAfterSlider from '../components/BeforeAfterSlider';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const Home: React.FC = () => {
+  usePageMeta(
+    'Mazerolle Builders Ltd. | Family-Run General Contracting | Ontario & New Brunswick',
+    'Mazerolle Builders Ltd.: Family-run, owner-operated residential and commercial construction. New builds, renovations, and general contracting in Waterloo Region, Oxford County, and Mid-Western New Brunswick. Free estimates. 30+ years experience.'
+  );
   return (
     <>
       {/* Hero Section */}

@@ -2,8 +2,13 @@ import React from 'react';
 import Section from '../components/Section';
 import BeforeAfterSlider from '../components/BeforeAfterSlider';
 import { Link } from 'react-router-dom';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const Projects: React.FC = () => {
+  usePageMeta(
+    'Our Work | Project Gallery & Before & After',
+    'See Mazerolle Builders projects: new builds, renovations, conversions, outdoor structures. Boat storage, church to fourplex, townhome framing, basements, porches, log playgrounds. Before & after transformations in Cambridge, Puslinch, Pioneer Tower.'
+  );
   const projects = [
     {
       id: 4,

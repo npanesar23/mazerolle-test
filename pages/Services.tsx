@@ -2,8 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Hammer, Home, HardHat, Ruler, TreePine, Warehouse } from 'lucide-react';
 import Section from '../components/Section';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const Services: React.FC = () => {
+  usePageMeta(
+    'Our Services | New Builds, Renovations & General Contracting',
+    'Professional residential and commercial construction: new builds (ON & NB), renovations, general contracting, log structures, outdoor living. Tiny homes, garages, kitchens, basements. No shortcuts, no hidden costs. Ontario and New Brunswick.'
+  );
   return (
     <>
       <div className="bg-stone-900 py-32 px-4 relative overflow-hidden flex items-center justify-center">

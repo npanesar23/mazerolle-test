@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import Section from '../components/Section';
 import { Phone, Mail, MapPin, Send, Paperclip } from 'lucide-react';
+import { usePageMeta } from '../hooks/usePageMeta';
 
 const Contact: React.FC = () => {
+  usePageMeta(
+    'Contact Us | Free Estimate',
+    'Contact Mazerolle Builders for a free estimate. Ontario: 519-591-1034. New Brunswick: 506-862-9497. PO Box 23032 Springbank, Woodstock, ON. We serve homeowners and businesses who value quality. Response within 24-48 business hours.'
+  );
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
